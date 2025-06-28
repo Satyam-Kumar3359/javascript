@@ -11,11 +11,11 @@ const scoreValue=100.3
 const isLoggedIn=false
 const outsideTemp=null
 let mystate;
-console.log(typeof my_name);//'string'
-console.log(typeof outsideTemp);//object
-console.log(typeof score);//number
-console.log(typeof isLoggedIn);//boolean
-console.log(typeof mystate);//undefined
+// console.log(typeof my_name);//'string'
+// console.log(typeof outsideTemp);//object
+// console.log(typeof score);//number
+// console.log(typeof isLoggedIn);//boolean
+// console.log(typeof mystate);//undefined
 
 const id=Symbol('123')
 const another_id=Symbol('123')
@@ -51,9 +51,9 @@ let my_obj={
 let my_Funtion=function(){
     console.log("Hello World");   
 }
-console.log(typeof my_Funtion);//function ,isko function object bhi khte h
-console.log(typeof my_obj);//object
-console.log(typeof heros);//object
+// console.log(typeof my_Funtion);//function ,isko function object bhi khte h
+// console.log(typeof my_obj);//object
+// console.log(typeof heros);//object
 
 
 /*
@@ -72,3 +72,29 @@ Return type of variables in JavaScript
        Function  =>  function object
        Object  =>  object
 */
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+// stack(primitive: var ki copy create hoti ) and heap(non primitive : var reference)
+
+let myutubename="satyam"
+let another=myutubename
+another="sujal"
+
+// console.log(myutubename);//satyM
+// console.log(another);//SUJL
+
+let userOne={
+    email:"sk@gmail.com",
+    upi:"user@ybl"
+}
+
+// by reference point kr rha h to change bhi original value me honge 
+// jbki stack k case me original data ki copy bnti thi and changes copy me hote the original data me nii
+//but stack me jo bhi rkhte h uska  reference milta h to change bhi original value hoti
+let userTwo=userOne
+userTwo.email="satyam@gmail.com"
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
