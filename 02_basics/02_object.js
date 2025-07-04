@@ -130,7 +130,7 @@ tinderUser.name = "John Doe";
 // tinderUser.email = "john.doe@example.com";
 tinderUser.isAuthorized = true;
 
-console.log(tinderUser);//{ id: 'user_123', name: 'John Doe', isAuthorized: true }
+// console.log(tinderUser);//{ id: 'user_123', name: 'John Doe', isAuthorized: true }
 
 // object inside object
 
@@ -143,8 +143,8 @@ const regularUser = {
 };
 
 // Accessing nested object properties
-console.log(regularUser.userfullname.firstname); // "satyam"
-console.log(regularUser["userfullname"]["lastname"]); // "kumar"
+// console.log(regularUser.userfullname.firstname); // "satyam"
+// console.log(regularUser["userfullname"]["lastname"]); // "kumar"
 
 const obj1={1:"a",2:"b"}
 const obj2={3:"a",4:"b"}
@@ -162,8 +162,8 @@ const obj3=Object.assign({},obj1,obj2);
 
 //spread operator use krke
 const obj4 = { ...obj1, ...obj2 };// 
-console.log(obj4); // { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
-console.log(obj3);//{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+// console.log(obj4); // { '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
+// console.log(obj3);//{ '1': 'a', '2': 'b', '3': 'a', '4': 'b' }
 
 // one of the most usable syntax , when value comes from database/backend
 // database se jb value aati h tb array of object aati h
@@ -244,3 +244,100 @@ Interview Summary & Important Points:
 
 These points cover object creation, manipulation, and best practices—frequently asked in JavaScript interviews.
 */
+
+
+//======================== object de-structurnig and JSON API ==================
+
+const course={
+    coursename:"javascript",
+    price:"999",
+    courseInstructor:"Satyam"
+}
+
+// console.log(course.courseInstructor)//satyam
+
+// agr man lo 3 bar print krvana to upper vali ko 3 bar likhna pdega to avoid this use
+// const {courseInstructor} =course
+// console.log(courseInstructor);
+
+//de-structuring
+
+const {courseInstructor : instructor} =course
+// console.log(instructor);
+
+//REACT
+// const navbar=({company}) =>{//desturing
+
+// }
+// navbar(company="hitesh")
+
+//phle backend se value aati thi in xml format, abhi mostly json str me aati h , ab backend se aayi value ko kaise likhna h yhi API h
+
+//JSON :API
+//yha key and value dono string format me hoti h
+
+// {
+//     "name":"satyam",
+//     "coursename":"javascript",
+//     "price":"free"
+// }
+
+//arr:API
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+/*
+Summary & Important Points:
+
+1. Object Creation:
+    - Objects can be created using object literals (`{}`) or constructors (`new Object()`).
+    - Object literals are concise and commonly used.
+    - Constructor-created objects are singleton by default.
+
+2. Symbols as Object Keys:
+    - Symbols provide unique property keys, preventing name collisions.
+    - Use `[symbol]: value` syntax to add a Symbol as a key in an object.
+    - Access Symbol-keyed properties with `obj[symbol]`.
+
+3. Property Access:
+    - Dot notation (`obj.prop`) is preferred for most cases.
+    - Bracket notation (`obj["prop"]`) is required for keys with spaces, special characters, or Symbols.
+
+4. Object.freeze():
+    - `Object.freeze(obj)` makes an object immutable (properties can't be changed or added).
+
+5. Methods in Objects:
+    - Functions can be added as properties (methods).
+    - Use `this` inside methods to refer to the object itself.
+
+6. Nested Objects:
+    - Objects can contain other objects as properties.
+    - Access nested properties using chained dot or bracket notation.
+
+7. Object Merging:
+    - Use `Object.assign(target, ...sources)` or the spread operator (`{...obj1, ...obj2}`) to merge objects.
+
+8. Arrays of Objects:
+    - Common pattern for representing collections (e.g., users from a database).
+    - Access individual objects with array indexing (`arr[0].prop`).
+
+9. Object Utility Methods:
+    - `Object.keys(obj)`: Returns array of property names.
+    - `Object.values(obj)`: Returns array of property values.
+    - `Object.entries(obj)`: Returns array of `[key, value]` pairs.
+    - `obj.hasOwnProperty(key)`: Checks if the object has a property as its own (not inherited).
+
+10. Object Destructuring:
+     - Allows extracting properties into variables for cleaner code.
+     - Example: `const { prop } = obj;` or `const { prop: alias } = obj;`
+
+11. JSON and APIs:
+     - JSON is a common data format for APIs, using string keys and values.
+     - Arrays of objects are often used to represent collections in API responses.
+
+These points cover object creation, manipulation, and best practices—frequently asked in JavaScript interviews.
+*/
+
