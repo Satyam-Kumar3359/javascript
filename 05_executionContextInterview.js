@@ -104,5 +104,5 @@ When a function finishes, its context is popped off the stack.
 this Keyword:
 
 The value of this is set during the creation phase of the execution context.
-Its value depends on how a function is called (global, object method, constructor, etc.).
+Its value depends on how a function is called (global, object method, constructor, etc.).+
   */
