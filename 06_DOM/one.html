@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading" >DOM Learning on chai and code</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dolor ad earum sed atque deleniti?</p>
+    </div>
+</body>
+</html>
+
+
+<!-- #document (https://en.wikipedia.org/wiki/Brendan_Eich)
+document.baseURI
+'https://en.wikipedia.org/wiki/Brendan_Eich'
+console.log(document.baseURI)
+undefined
+document.location
+Location {ancestorOrigins: DOMStringList, href: 'https://en.wikipedia.org/wiki/Brendan_Eich', origin: 'https://en.wikipedia.org', protocol: 'https:', host: 'en.wikipedia.org', …}
+document.links
+HTMLCollection(738) [a.mw-jump-link, a, a, a, a, a, a, a, a, a, a, a, a, a.mw-logo, a.cdx-button.cdx-button--fake-button.cdx-button--fake-button--enabled.cdx-button--weight-quiet.cdx-…, a, a, a, a, a, a, a, a, a, a, a.image, a.extiw, a.extiw, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.vector-toc-link, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.interlanguage-link-target, a.wbc-editpage, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a, a.mw-file-description, a, a, a, a, a, a, …]
+document.getElementById("firstheading")
+null
+document.getElementById('firstHeading')
+<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​…​</h1>​<span class=​"mw-page-title-main">​Brendan Eich​</span>​</h1>​
+document.getElementById('firstHeading').innerHTML="<h1>Chai and Coffee</h1>"
+'<h1>Chai and Coffee</h1>'
+document,links[6]
+VM1451:1 Uncaught ReferenceError: links is not defined
+    at <anonymous>:1:15
+(anonymous) @ VM1451:1Understand this error
+document.links[6]
+<a href=​"/​/​en.wikipedia.org/​wiki/​Wikipedia:​Contact_us" title=​"How to contact Wikipedia">​…​</a>​flex -->
+
+<!--
+DOM Tree Diagram:
+ window
+ |
+ |
+document
+|
+├── html
+    |
+    ├── head
+    |   ├── meta (charset="UTF-8")->attr
+    |   ├── meta (name="viewport")
+    |   └── title ("DOM Learning")->text node
+    |
+    └── body
+        └── div (class="bg-black")-> attr
+            ├── h1 (class="heading") ("DOM Learning on chai and code")-> text node +attr
+            └── p ("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident dolor ad earum sed atque deleniti?")->text node
+-->
