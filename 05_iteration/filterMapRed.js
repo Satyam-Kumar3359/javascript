@@ -237,3 +237,26 @@ const groupedByDepartment = employees.reduce((accumulator, employee) => {
 
 //     ]
 // }
+
+
+/*
+Difference between map, filter, and reduce:
+
+1. map:
+    - Transforms each element of an array using a provided function.
+    - Returns a new array of the same length with transformed elements.
+    - Does not modify the original array.
+    - Example: [1,2,3].map(x => x * 2) // [2,4,6]
+
+2. filter:
+    - Selects elements from an array that satisfy a given condition.
+    - Returns a new array with only the elements that pass the test.
+    - Does not modify the original array.
+    - Example: [1,2,3,4].filter(x => x > 2) // [3,4]
+
+3. reduce:
+    - Reduces the array to a single value by applying a function to each element and an accumulator.
+    - Returns the accumulated result (can be any type: number, object, array, etc.).
+    - Does not modify the original array.
+    - Example: [1,2,3,4].reduce((acc, x) => acc + x, 0) // 10
+*/
