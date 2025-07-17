@@ -141,9 +141,9 @@ title.innerText
         <input type="password" name="" id="" >
 
         <ul>
-            <li>one</li>
-            <li>two</li>
-            <li>Three</li>
+            <li class="list-item" >one</li>
+            <li class="list-item" >two</li>
+            <li class="list-item" >Three</li>
         </ul>
 
     </div>
@@ -208,4 +208,93 @@ tempLilist.forEach(function (l) {
 })
 undefined
 
--->
+//node list ko convert krna pdega array me to use foreach(),map, reduce etc
+
+
+HTMLCollection []length: 0[[Prototype]]: HTMLCollectionitem: ƒ item()length: (...)namedItem: ƒ namedItem()constructor: ƒ HTMLCollection()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "HTMLCollection"get length: ƒ length()[[Prototype]]: Object
+const templist=document.getElementsByClassName('list-item')
+undefined
+templist
+HTMLCollection []
+Array.from(templist)
+[]length: 0[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+myConvertedArray=Array.from(templist)
+[]
+const myConvertedArray=Array.from(templist)
+undefined
+myConvertedArray
+[]length: 0[[Prototype]]: Array(0)
+
+document.getElementsByClassName('list-item')
+HTMLCollection []length: 0[[Prototype]]: HTMLCollection
+const templist=document.getElementsByClassName('list-item')
+undefined
+const convertedArray=Array.from(templist)
+undefined
+convertedArray.forEach( function(li){
+    li.style.color = 'orange'
+})
+undefined
+convertedArray.forEach( function(li){
+    li.style.backgroundColor="grenn"
+})
+undefined
+
+ JAVASCRIPT WIKIPEDIA
+
+document.querySelectorAll('h2')
+NodeList(14) [h2.vector-pinnable-header-label, h2#History, h2#Trademark, h2#Website_client-side_usage, h2#Other_usage, h2#Execution, h2#Features, h2#Syntax, h2#Security, h2#Development_tools, h2#Related_technologies, h2#References, h2#Further_reading, h2#External_links]
+const allH2=document.querySelectorAll('h2')
+undefined
+allH2[0].innerText
+''
+allH2[2].innerText
+'Trademark'
+document.querySelectorAll('h2')
+NodeList(14) [h2.vector-pinnable-header-label, h2#History, h2#Trademark, h2#Website_client-side_usage, h2#Other_usage, h2#Execution, h2#Features, h2#Syntax, h2#Security, h2#Development_tools, h2#Related_technologies, h2#References, h2#Further_reading, h2#External_links]
+document.querySelectorAll('h3')
+NodeList(28) [h3#Creation_at_Netscape, h3#Adoption_by_Microsoft, h3#The_rise_of_JScript, h3#Growth_and_standardization, h3#Reaching_maturity, h3#Examples_of_scripted_behavior, h3#Libraries_and_frameworks, h3#JavaScript_engine, h3#Runtime_system, h3#Imperative_and_structured, h3#Weakly_typed, h3#Dynamic, h3#Object-orientation_(prototype-based), h3#Functional, h3#Delegative, h3#Miscellaneous, h3#Vendor-specific_extensions, h3#Cross-site_scripting, h3#Cross-site_request_forgery, h3#Misplaced_trust_in_the_client, h3#Misplaced_trust_in_developers, h3#Browser_and_plugin_coding_errors, h3#Sandbox_implementation_errors, h3#Hardware_vulnerabilities, h3#Java, h3#JSON, h3#Transpilers, h3#WebAssembly]
+const allH3=document.querySelectorAll('h3')
+undefined
+allH3[0].innerText
+'Creation at Netscape'
+allH3[2].innerText
+'The rise of JScript'
+
+
+document.querySelectorAll('h2')
+NodeList(14) [h2.vector-pinnable-header-label, h2#History, h2#Trademark, h2#Website_client-side_usage, h2#Other_usage, h2#Execution, h2#Features, h2#Syntax, h2#Security, h2#Development_tools, h2#Related_technologies, h2#References, h2#Further_reading, h2#External_links]
+const allH2=document.querySelectorAll('h2')
+undefined
+allH2[0].innerText
+''
+allH2[2].innerText
+'Trademark'
+document.querySelectorAll('h2')
+NodeList(14) [h2.vector-pinnable-header-label, h2#History, h2#Trademark, h2#Website_client-side_usage, h2#Other_usage, h2#Execution, h2#Features, h2#Syntax, h2#Security, h2#Development_tools, h2#Related_technologies, h2#References, h2#Further_reading, h2#External_links]
+document.querySelectorAll('h3')
+NodeList(28) [h3#Creation_at_Netscape, h3#Adoption_by_Microsoft, h3#The_rise_of_JScript, h3#Growth_and_standardization, h3#Reaching_maturity, h3#Examples_of_scripted_behavior, h3#Libraries_and_frameworks, h3#JavaScript_engine, h3#Runtime_system, h3#Imperative_and_structured, h3#Weakly_typed, h3#Dynamic, h3#Object-orientation_(prototype-based), h3#Functional, h3#Delegative, h3#Miscellaneous, h3#Vendor-specific_extensions, h3#Cross-site_scripting, h3#Cross-site_request_forgery, h3#Misplaced_trust_in_the_client, h3#Misplaced_trust_in_developers, h3#Browser_and_plugin_coding_errors, h3#Sandbox_implementation_errors, h3#Hardware_vulnerabilities, h3#Java, h3#JSON, h3#Transpilers, h3#WebAssembly]
+const allH3=document.querySelectorAll('h3')
+undefined
+allH3[0].innerText
+'Creation at Netscape'
+allH3[2].innerText
+'The rise of JScript'
+document.querySelectorAll(".mw-heading mw-heading4")
+NodeList []length: 0[[Prototype]]: NodeList
+document.querySelectorAll(".mw-heading")
+NodeList(56) [div.mw-heading.mw-heading2, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading2, div.mw-heading.mw-heading2, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading2, div.mw-heading.mw-heading2, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading2, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading3, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading3, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading3, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading3, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading4, div.mw-heading.mw-heading5, div.mw-heading.mw-heading5, div.mw-heading.mw-heading3, div.mw-heading.mw-heading2, div.mw-heading.mw-heading2, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading2, div.mw-heading.mw-heading2, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading3, div.mw-heading.mw-heading2, div.mw-heading.mw-heading2, div.mw-heading.mw-heading2]
+const myH2 = document.querySelectorAll(".mw-heading")
+undefined
+myH2[0].innerText
+'History'
+myH2.forEach( function(h){
+    h.style.color='red'
+})
+undefined
+myH2.forEach( function(h){
+    h.style.backgroundColor='pink'
+})
+undefined
+
+--> 
