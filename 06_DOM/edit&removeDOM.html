@@ -18,6 +18,29 @@
     }
     addLanguage("python")
     addLanguage("typescript")
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('golang')
+
+    //  edit 
+    const secondlang=document.querySelector("li:nth-child(2)")
+    // secondlang.innerHTML="Mojo"// tyr to use another way
+
+    const newli=document.createElement('li');
+    newli.textContent="Mojo2"// dono same h
+    secondlang.replaceWith(newli);
+
+    //edit
+    const firstLang=document.querySelector('li:first-child')
+    firstLang.outerHTML="<li>Typescript</li>"
+
+    //remove
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
 </script>
     
 </html>
