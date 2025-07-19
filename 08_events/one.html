@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick=function(){
+    //     alert("owl clicked")
+    // }// onclick event provide less features
+
+    document.getElementById('owl').addEventListener('click', function(){
+        alert("owl clicked again");
+    }) // addEventListener provide more features
+// addEventListener have three parameters
+// 1. event name
+// 2. function to be executed
+// 3. optional parameter (useCapture) which is false by default, it is used to specify the event flow (capture or bubble phase), in simple term we can say it is used to specify the order of execution of events   
+// in the event flow, it is used to specify whether the event should be captured or bubbled
+// in the capture phase, the event is captured by the parent element and then passed down to the child element
+// in the bubble phase, the event is passed from the child element to the parent element
+    // addEventListener can be used for multiple events, it is more flexible than onclick event
+
+ //attachEvent is an old method to attach an event, it is not recommended to use it anymore, it is used to attach an event to an element, but it can only be used for one event at a time, and it is not supported in all browsers
+    // it is used in old versions of Internet Explorer, it is not supported in modern browsers   
+//jQuery is a library that provides a lot of features to work with events, it is not recommended to use it anymore, it is used to attach an event to an element, but it can only be used for one event at a time, and it is not supported in all browsers
+    // it is used to attach an event to an element, but it can only be used for one event at a time, and it is not supported in all browsers
+
+//addEventListener can be used for multiple events 
+
+
+    // document.getElementById('photoshop').addEventListener('click', function(){
+    //     alert("photoshop clicked")
+    // }) // it provide more features   
+
+
+    document.getElementById('owl').addEventListener('mouseover', function(){
+        this.style.border = "2px solid red";
+    }) // mouseover event is used to change the style of the element when the mouse is over the element
+    document.getElementById('owl').addEventListener('click', function(e){
+       console.log(e);// e is the event object that contains information about the event
+       
+    }, false); // false is the useCapture parameter, it is used to specify the event flow (capture or bubble phase), in simple term we can say it is used to specify the order of execution of events   
+
+
+    //we have to learn for interview :type,timestamp,defaltPrevented,stopPropagation,stopImmediatePropagation,composedPath,composed,returnValue,srcElement,target,which,button,buttons,clientX,clientY,pageX,pageY,offsetX,offsetY,screenX,screenY,detail
+    //altkey,ctrlkey,shiftkey,keyCode
+
+    // Example: Using various event properties and methods
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("type:", e.type); // Event type
+    //     console.log("timestamp:", e.timeStamp); // When event was created
+    //     console.log("defaultPrevented:", e.defaultPrevented); // If preventDefault() was called
+    //     // e.preventDefault(); // Uncomment to prevent default action
+    //     // e.stopPropagation(); // Uncomment to stop bubbling
+    //     // e.stopImmediatePropagation(); // Uncomment to stop all listeners
+    //     console.log("composedPath:", e.composedPath()); // Event path
+    //     console.log("composed:", e.composed); // If event bubbles across shadow DOM
+    //     console.log("returnValue:", e.returnValue); // Default true, set false to cancel event
+    //     console.log("srcElement:", e.srcElement); // Deprecated, use target
+    //     console.log("target:", e.target); // Element that triggered event
+    //     console.log("which:", e.which); // Mouse button or key pressed
+    //     console.log("button:", e.button); // Mouse button (0=left, 1=middle, 2=right)
+    //     console.log("buttons:", e.buttons); // Mouse buttons pressed
+    //     console.log("clientX:", e.clientX, "clientY:", e.clientY); // Mouse position in viewport
+    //     console.log("pageX:", e.pageX, "pageY:", e.pageY); // Mouse position in document
+    //     console.log("offsetX:", e.offsetX, "offsetY:", e.offsetY); // Mouse position in target element
+    //     console.log("screenX:", e.screenX, "screenY:", e.screenY); // Mouse position on screen
+    //     console.log("detail:", e.detail); // Click count
+    //     console.log("altKey:", e.altKey, "ctrlKey:", e.ctrlKey, "shiftKey:", e.shiftKey); // Modifier keys
+    //     console.log("keyCode:", e.keyCode); // Key code (for keyboard events)
+    // });
+</script>
+</html>
