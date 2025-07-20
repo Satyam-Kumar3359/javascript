@@ -23,9 +23,9 @@
     //     alert("owl clicked")
     // }// onclick event provide less features
 
-    document.getElementById('owl').addEventListener('click', function(){
-        alert("owl clicked again");
-    }) // addEventListener provide more features
+    // document.getElementById('owl').addEventListener('click', function(){
+    //     alert("owl clicked again");
+    // }) // addEventListener provide more features
 // addEventListener have three parameters
 // 1. event name
 // 2. function to be executed
@@ -48,13 +48,13 @@
     // }) // it provide more features   
 
 
-    document.getElementById('owl').addEventListener('mouseover', function(){
-        this.style.border = "2px solid red";
-    }) // mouseover event is used to change the style of the element when the mouse is over the element
-    document.getElementById('owl').addEventListener('click', function(e){
-       console.log(e);// e is the event object that contains information about the event
+    // document.getElementById('owl').addEventListener('mouseover', function(){
+    //     this.style.border = "2px solid red";
+    // }) // mouseover event is used to change the style of the element when the mouse is over the element
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //    console.log(e);// e is the event object that contains information about the event
        
-    }, false); // false is the useCapture parameter, it is used to specify the event flow (capture or bubble phase), in simple term we can say it is used to specify the order of execution of events   
+    // }, false); // false is the useCapture parameter, it is used to specify the event flow (capture or bubble phase), in simple term we can say it is used to specify the order of execution of events   
 
 
     //we have to learn for interview :type,timestamp,defaltPrevented,stopPropagation,stopImmediatePropagation,composedPath,composed,returnValue,srcElement,target,which,button,buttons,clientX,clientY,pageX,pageY,offsetX,offsetY,screenX,screenY,detail
@@ -84,5 +84,64 @@
     //     console.log("altKey:", e.altKey, "ctrlKey:", e.ctrlKey, "shiftKey:", e.shiftKey); // Modifier keys
     //     console.log("keyCode:", e.keyCode); // Key code (for keyboard events)
     // });
+    
+    // document.getElementById('images').addEventListener('click', function(e){
+    //         alert("clicked inside the ul element");
+    // },false); // event delegation, it is used to attach an event to a parent element and then check if the target element is the one we want to attach the event to, it is used to improve performance and reduce memory usage, it is used to attach an event to a parent element and then check if the target element is the one we want to attach the event to, it is used to improve performance and reduce memory usage
+     
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     // e.stopPropagation(); // Stop the event from bubbling up
+    //     alert("owl clicked is below");
+    // },false)
+    // // when default value is false then this is bubble phase, it means that the event will bubble up from the target element to the parent element, if we want to stop the event from bubbling up we can use e.stopPropagation() method
+
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //         alert("clicked inside the ul element");
+    // },false); // event delegation, it is used to attach an event to a parent element and then check if the target element is the one we want to attach the event to, it is used to improve performance and reduce memory usage, it is used to attach an event to a parent element and then check if the target element is the one we want to attach the event to, it is used to improve performance and reduce memory usage
+     
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     // e.stopPropagation(); // Stop the event from bubbling up
+    //     alert("owl clicked is below");
+    //     // e.stopPropagation(); // Stop the event from bubbling up
+
+    // },false)
+    // when event propagation ki default value is false then this is bubble phase, it means that the event will bubble up from the target element to the parent element, if we want to stop the event from bubbling up we can use e.stopPropagation() method
+    
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //         alert("clicked inside the ul element");
+    //         // e.stopPropagation(); // Stop the event from bubbling up not from capture phase
+    // },true); 
+     
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     // e.stopPropagation(); // Stop the event from bubbling up
+    //     alert("owl clicked is below");
+    //     // e.stopPropagation(); // Stop the event from bubbling up
+    // },true); // when third parameter is true then this is capture phase, it means that the event will be captured by the parent element and then passed down to the child element, if we want to stop the event from bubbling up we can use e.stopPropagation() method
+    
+
+    //when we click on google link, it will open google.com in a new tab, but we can prevent it from opening by using e.preventDefault() method
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault(); // Prevent the default action of the link
+    //     alert("Google link clicked, but default action prevented.");
+    //     e.stopPropagation(); // Stop the event from bubbling up
+    // },false); // Prevent the default action of the link, it will not open google.com
+
+
+//CLICKING ON IMAGE AND IMAGE WILL BE REMOVED
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log(e.target.tagName); // Log the tag name of the clicked element
+        // if(e.target.tagName === 'IMG'){ // Check if the clicked element is an image
+        //     e.target.remove(); // Remove the clicked image
+        //     alert("Image removed: " + e.target.id);
+        // }
+        if(e.target.tagName === 'IMG'){ // Check if the clicked element is an image
+            console.log(e.target.id); // Log the ID of the clicked image
+            // e.target.parentNode.remove(); // Remove the parent <li> of the clicked image
+            // alert("Image removed: " + e.target.id);
+        }
+    }, false); // Use false to allow bubbling phase, so we can capture clicks on images inside the ul
+        
 </script>
-</html>
+</html
