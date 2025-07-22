@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1>chai and javascript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    // setInterval(handler,timeout) is used to execute a function repeatedly after a certain time delay
+    // setInterval(function(){
+    //     console.log("chai peelo",Date.now());
+    // },2000) ;
+
+    //it has third parameter also which is used to pass arguments to the function
+    // const sayDate=function(str){
+    //     console.log(str,Date.now());
+    // }
+    // setInterval(sayDate,2000,"hii");
+
+    //we want to stop the execution of setInterval when we click on stop button
+        const sayDate=function(){
+        console.log("chai peelo",Date.now());
+    }
+    const intervalId=setInterval(sayDate,2000);
+    clearInterval(intervalId);// ab ye stop ho jayega
+    // but isko kisi event pr lagate hai ki jab hum click karein stop pr tab ye stop ho jaye and jb click karein start pr tab ye start ho jaye
+
+
+</script>
+</html>

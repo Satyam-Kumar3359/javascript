@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+//setTimeout is used to execute a function after a certain time delay    
+    // setTimeout(function(){
+    //     console.log("chai peelo");
+    // },2000)
+
+// const sayHello=function(){
+//         console.log("chai peelo");
+//     }
+//     setTimeout(sayHello,2000)//we give reference of function as sayhello without parenthesis
+
+//now we want that h1 me chai aur code ko change krna 
+// const sayHello=function(){
+//         console.log("chai peelo");
+//     }
+//     document.querySelector('h1').innerHTML="best js series ever";
+//     setTimeout(sayHello,2000)//we give reference of function as sayhello without parenthesis
+
+// now we want that best js series apper after 2 sec
+// const sayHello=function(){
+//         console.log("chai peelo");
+//     }
+//     const changeText= function(){
+//         document.querySelector('h1').innerHTML="best js series ever";
+//     }
+    
+//     setTimeout(sayHello,2000)
+//     setTimeout(changeText,2000)
+ 
+//now we want that if i click on stop before 2 sec then it will not preform the action
+// clearTimeout is used to stop the execution of setTimeout
+// const sayHello=function(){
+//         console.log("chai peelo");
+//     }
+//     const changeText= function(){
+//         document.querySelector('h1').innerHTML="best js series ever";
+//     }
+
+//     const changeMe=setTimeout(changeText,2000);
+//     clearTimeout(changeMe);// ab ye change nii hoga 
+ //   but isko krne se koi fayda nii qki settimeout lagaya phir rok diya
+    // so isko kisi event pr lagate hai
+
+const sayHello=function(){
+        console.log("chai peelo");
+    }
+    const changeText= function(){
+        document.querySelector('h1').innerHTML="best js series ever";
+    }
+
+    const changeMe=setTimeout(changeText,2000);
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);//ab 2 sec se phle jaise hi stop button pr click kr denge to chai aur code change nii hoga
+        console.log("stopped");
+    })
+</script>
+</html>
