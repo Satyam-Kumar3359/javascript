@@ -54,6 +54,7 @@ let startChangingColor=function(){
 
 let stopChangingColor=function(){
   clearInterval(IntervalId)// reference dena pdega 
+  //jb intervalid use nii ho rha h to usko flush kr diya for memory free and space optimization
   IntervalId=null
 }
 

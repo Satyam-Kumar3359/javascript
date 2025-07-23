@@ -23,13 +23,32 @@
     // setInterval(sayDate,2000,"hii");
 
     //we want to stop the execution of setInterval when we click on stop button
-        const sayDate=function(){
-        console.log("chai peelo",Date.now());
-    }
-    const intervalId=setInterval(sayDate,2000);
-    clearInterval(intervalId);// ab ye stop ho jayega
+    //     const sayDate=function(){
+    //     console.log("chai peelo",Date.now());
+    // }
+    // const intervalId=setInterval(sayDate,1000);
+    // clearInterval(intervalId);// ab ye stop ho jayega
     // but isko kisi event pr lagate hai ki jab hum click karein stop pr tab ye stop ho jaye and jb click karein start pr tab ye start ho jaye
 
+    
+    let intervalId = null;
+const startprinting = function () {
+  if (intervalId === null) { // ✅ only start if not already running
+    intervalId = setInterval(() => {
+      console.log("chai peelo", Date.now());
+    }, 2000);
+  }
+};
+
+
+    const stopPrinting=function(){
+        clearInterval(intervalId);
+        intervalId=null
+    }
+
+        
+    document.querySelector('#start').addEventListener('click',startprinting)
+    document.querySelector('#stop').addEventListener('click',stopPrinting)
 
 </script>
 </html>
