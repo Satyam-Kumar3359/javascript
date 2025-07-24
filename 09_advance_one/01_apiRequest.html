@@ -1,0 +1,146 @@
+<!-- //api.github.com/users/username/repos
+// This is a placeholder URL for the GitHub API endpoint to fetch user repositories.
+// Replace 'username' with the actual GitHub username to fetch their repositories.
+
+//randomuser.me/api
+// This is a placeholder URL for the Random User Generator API.
+// It generates random user data. You can use it to test API requests without needing a specific user.
+
+
+//json formatter 
+//it is used to format JSON data for better readability.// means api ko pdhane ke liye json formatter ka use hota hai. -->
+
+<!-- 
+//Api Request:// An API request is a way to ask a server for data or to perform an action.
+// It typically involves sending a request to a specific URL (endpoint) with certain parameters or headers
+// and receiving a response, often in JSON format. APIs allow different software systems to communicate with
+// each other, enabling functionalities like fetching user data, submitting forms, or retrieving information from a database.// Example of an API request:
+// 1. Identify the API endpoint you want to access.
+// 2. Use a tool like Postman or a programming language to send a request to that endpoint.
+// 3. Include any necessary parameters or headers in your request.
+// 4. Receive the response, which is often in JSON format, and process it as needed.
+// Example of an API request in JavaScript using fetch:             
+fetch('https://api.github.com/users/username/repos')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));  
+// In this example, we are making a GET request to the GitHub API to fetch repositories for a specific user.
+// The response is then converted to JSON format and logged to the console. If there's an error,
+// it will be caught and logged as well.
+// Note: Replace 'username' with the actual GitHub username you want to query.
+// This code snippet demonstrates how to make an API request using the Fetch API in JavaScript.
+// The Fetch API is a modern way to make HTTP requests in JavaScript, allowing you to
+// easily retrieve data from APIs or send data to servers.
+// The code uses the fetch function to send a GET request to the specified URL.
+// It then processes the response by converting it to JSON format and logging the data to the console.
+// If an error occurs during the request, it is caught and logged as well.
+// This is a simple example of how to make an API request in JavaScript using the Fetch
+// API, which is widely used for web development to interact with external services and retrieve data. -->
+
+
+<!-- // but before this you need to know about the following concepts:
+// 1. API (Application Programming Interface): A set of rules and protocols for building and interacting with software applications.
+// 2. JSON (JavaScript Object Notation): A lightweight data interchange format that is easy to read and write for humans and machines.
+// 3. HTTP (Hypertext Transfer Protocol): The protocol used for transferring data over the web.
+// 4. Fetch API: A modern JavaScript API for making network requests to servers.
+// 5. Promises: A JavaScript feature that allows you to handle asynchronous operations, such as API requests, in a more manageable way.
+// 6. Asynchronous Programming: A programming paradigm that allows operations to run in the background without blocking the main thread
+//    of execution, enabling smoother user experiences in web applications.
+// 7. CORS (Cross-Origin Resource Sharing): A security feature that allows or restricts web applications from making requests to a different domain than the one that served the web page. in simple words, CORS is a security feature implemented by web browsers to prevent malicious websites from making requests to a different domain than the one that served the web page. It allows or restricts web applications from making requests to a different domain than the one that served the web page. CORS is important for ensuring that web applications can securely interact with APIs and other resources hosted on different domains.
+// 8. API Endpoints: Specific URLs where APIs can be accessed to perform actions or retrieve data.
+// 9. Headers: Additional information sent with an HTTP request or response, often used to provide metadata or authentication details.
+    // 10. Status Codes: Numeric codes returned by a server to indicate the result of an HTTP request, such as 200 for success, 404 for not found, or 500 for server error.
+    // 11. Rate Limiting: A technique used by APIs  to control the number of requests a client can make in a given time period, preventing abuse and ensuring fair usage.
+// 12. API Documentation: A guide provided by API developers that explains how to use the API, including available endpoints, request formats, response formats, and authentication methods.
+// 13. Authentication: The process of verifying the identity of a user or application before allowing access to an API. This can involve using API keys, OAuth tokens, or other methods to ensure that only authorized users can access the API.
+// 14. Error Handling: The process of managing errors that occur during API requests, such as network issues, invalid requests, or server errors. Proper error handling ensures that applications can gracefully handle issues and provide meaningful feedback to users or developers.
+// 15. API Versioning: A practice of managing changes to an API over time, allowing developers to introduce new features or modifications without breaking existing          -->
+
+<!-- //before fetch api request we have some old //methods to make api request like XMLHttpRequest, but fetch api is more modern and easier to use.
+
+//XMLHttpRequest: An older method for making HTTP requests in JavaScript, which is more complex and less user-friendly compared to the Fetch API. It requires more boilerplate code and does not return promises, making it harder to work with asynchronous operations.
+// XMLHttpRequest is a built-in JavaScript object that allows you to make HTTP requests to servers
+// and handle responses. It is an older method compared to the Fetch API and is more complex
+// to use. Here's a brief overview of how XMLHttpRequest works:
+// 1. Create an instance of XMLHttpRequest.
+// 2. Open a connection to the desired URL using the open() method.
+// 3. Set up event handlers to handle the response.
+// 4. Send the request using the send() method.
+// 5. Handle the response in the event handlers, checking the status code and processing the response data.  
+// Example of an XMLHttpRequest in JavaScript:
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.github.com/users/username/repos', true);
+xhr.onreadystatechange = function() {// Event handler for state changes
+  // This function is called whenever the readyState changes
+  // readyState 0: request not initialized
+  // readyState 1: server connection established
+  // readyState 2: request received
+  // readyState 3: processing request
+  // readyState 4: request finished and response is ready
+  // Check if the request is complete   
+ if (xhr.readyState === 4) { // Request is complete
+    if (xhr.status === 200) { // Success
+      var data = JSON.parse(xhr.responseText);// Parse the JSON response 
+      // Process the data as needed         
+      console.log(data);
+    } else { // Error handling
+      console.error('Error:', xhr.status, xhr.statusText);// Log the error status and message    
+        // Handle the error as needed 
+    }
+  }
+}; -->
+<!-- xhr.send(); // Send the request
+// In this example, we create an XMLHttpRequest object, open a GET request to the GitHub API to fetch repositories for a specific user, and set up an event handler to process the response.
+// When the request is complete, we check the status code and either log the data or handle any errors that may have occurred.
+// Note: Replace 'username' with the actual GitHub username you want to query.
+// This code snippet demonstrates how to make an API request using XMLHttpRequest in JavaScript. -->
+
+
+// now we talk about' console' is a debugging tool which is provided by runtime V8 engine
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// Example of an API request using xmlHttpRequest
+    const requestUrl = 'https://api.github.com/users/Satyam-kumar3359';
+    const xhr = new XMLHttpRequest();// Create a new XMLHttpRequest object
+    xhr.open('GET', requestUrl); // Initialize a GET request to the specified URL
+    console.log(xhr.readyState); // Log the initial readyState (0: request not initialized)
+    xhr.onreadystatechange = function(){// Set up a function to handle state changes
+        console.log(xhr.readyState); // Log the current readyState
+        // This function is called whenever the readyState changes
+        // if(xhr.readyState === 4){ // Check if the request is complete (readyState 4)
+        //     if(xhr.status === 200){ // Check if the request was successful (status 200)
+        //         const response = JSON.parse(xhr.responseText); // Parse the JSON response
+        //         console.log(response); // Log the response data
+        //     } else {
+        //         console.error('Error:', xhr.status, xhr.statusText); // Log any errors
+        //     }
+        // }
+
+        // if(xhr.readyState ===4){
+        //     console.log(this.responseText); // Log the response text when the request is complete
+        //     //'this' means isi context ki bat ho rhi h : 'this means the "current context "of the function being executed, which is the XMLHttpRequest object in this case.'
+        // }
+        if(xhr.readyState ===4){
+            // const data = this.responseText; // Get the response text when the request is complete
+            // console.log(typeof data)//string
+            // console.log(data.followers); // undefined because jb bhi response aata h url se vo " STRING" me hi aata so 
+            // // we need to convert this into number
+            const data = JSON.parse(this.responseText);// for convet use Number,String,
+            //now parse convert the string into json format
+            console.log(typeof data)//object
+            console.log(data.followers); 
+    }
+}
+    xhr.send(); // Send the request
+</script>
+</html>
