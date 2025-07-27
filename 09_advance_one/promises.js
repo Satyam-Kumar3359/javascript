@@ -117,3 +117,40 @@ async function consumePromise() {
 }
 // consumepromise ko call krna na bhhoole
 consumePromise()
+
+
+// async function getAllUser() {
+//     try {
+//         const response=await fetch("https://jsonplaceholder.typicode.com/users")
+//         //ab actually me yha data noo print hoga qki response ko json formate me krne me time lgata h
+//         // and if print response it will ans 
+//         // console.log(response)// it give output
+        
+//         // const data =response.json()// it takes time that why make it await 
+//         // console.log(data);
+//         const data =await response.json() //now it works
+//         console.log(data);
+        
+//     } catch (error) {
+//         console.log("E",error);
+        
+//     }
+    
+// }
+// getAllUser()
+
+// ab isi ko .then .catch se likha ho to
+fetch('https://api.github.com/users/Satyam-kumar3359')//iska respose type promise h
+.then((response)=>{
+    return response.json()
+})
+.then((response_data)=>{
+    console.log(response_data);
+    
+})
+.catch((error)=>{
+    console.log("E:",error);
+    
+})
+
+//fetch bad me execute tha but yha pr sbse phle fetch ho rha h bad me upper vala code 
